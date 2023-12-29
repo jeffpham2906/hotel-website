@@ -1,0 +1,120 @@
+@use '../color/colors.scss' as *;
+
+footer {
+    background-color: $greyColor ;
+    color: #FFF;
+    padding: 9rem 18rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    margin-top: 16rem;
+
+    @media (max-width: $breakpoint-laptop) {
+        padding: 8rem 10rem;
+        margin-top: 14rem;
+    }
+
+    .triagle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 6.8rem solid transparent;
+        border-right: 6.8rem solid transparent;
+        border-bottom: 5rem solid $greyColor;
+        transform: translateX(-50%);
+        left: 50%;
+        top: -5rem;
+    }
+
+    .footer-infor {
+        div {
+            width: fit-content;
+            text-align: center;
+            margin-bottom: 1.6rem;
+
+            h1 {
+                text-transform: uppercase;
+                font-family: Adobe Garamond Pro;
+                letter-spacing: 3.75px;
+                font-weight: 700;
+                font-size: $fsLarge;
+                margin-bottom: 0.5rem;
+            }
+
+            span {
+                font-size: 0.9rem;
+                @extend h1;
+                letter-spacing: 5.4px;
+
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    .footer-detail {
+        ul {
+            list-style: none;
+            font-size: 1.6rem;
+            font-weight: 500;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 3rem;
+
+                img {
+                    width: 18.703px;
+                    height: 15.149px;
+
+                }
+            }
+        }
+    }
+
+    .footer-subscribe {
+        p {
+            font-size: 1.6rem;
+            margin-bottom: 4rem;
+        }
+
+        form {
+
+            display: flex;
+
+            input {
+                border: 2px solid $primaryColor ;
+                padding: 1.2rem 2.4rem;
+                background-color: transparent;
+                color: #FFF;
+                font-size: 1.6rem;
+                border-radius: $rounded 0 0 $rounded ;
+                width: 80%;
+
+
+                &::placeholder {
+                    color: #FFF;
+                }
+            }
+
+            .btn {
+                border: none;
+                border: 2px solid $primaryColor ;
+                background-color: $primaryColor;
+                padding: 1.2rem 2.4rem;
+                font-size: 1.6rem;
+                text-transform: uppercase;
+
+                border-radius: 0 $rounded $rounded 0;
+                cursor: pointer;
+            }
+        }
+    }
+}

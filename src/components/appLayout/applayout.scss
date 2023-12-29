@@ -1,0 +1,10 @@
+@use '../color/colors.scss' as *;
+
+.applayout {
+    padding-inline: 15rem;
+    margin-top: 6rem;
+
+    @media (max-width: $breakpoint-laptop) {
+        padding-inline: 10rem;
+    }
+}

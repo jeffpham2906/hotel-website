@@ -1,0 +1,74 @@
+@use '../../components/color/colors.scss' as *;
+
+h2 {
+    font-size: $fsLarge;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.body-room {
+    display: grid;
+    grid-template-columns: minmax(40rem, 1fr) auto;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+
+    .body-room-left {
+
+        border-left: 2px solid $greyColor;
+        padding: 0 3rem;
+
+        h2 {
+            text-align: left;
+            font-size: $fsXl;
+            margin-bottom: 3rem;
+            font-weight: 700;
+            line-height: 0.9;
+            font-family: Adobe Garamond Pro;
+
+            @media (max-width: $breakpoint-laptop) {
+                font-size: $fsXl-laptop;
+            }
+        }
+
+        p {
+            font-size: $fsNormal;
+            margin-bottom: 2.4rem;
+            line-height: 1.6;
+
+            @media (max-width: $breakpoint-laptop) {
+                font-size: $fsNormal-laptop;
+                line-height: 1.4;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: $primaryColor;
+            padding: 1.8rem 6rem;
+            border-radius: $rounded;
+            color: white;
+            letter-spacing: 1px;
+            font-size: $fsNormal;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            @media (max-width: $breakpoint-laptop) {
+                padding: 1.5rem 5.4rem;
+                font-size: $fsNormal-laptop;
+            }
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

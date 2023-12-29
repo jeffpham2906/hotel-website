@@ -1,0 +1,49 @@
+@use '../../components/color/colors.scss' as *;
+
+.testimonials {
+    margin-top: 10rem;
+    font-size: $fsNormal;
+    text-align: center;
+
+    @media (max-width: $breakpoint-laptop) {
+        font-size: $fsNormal-laptop;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: $fsXl;
+        margin-bottom: 3rem;
+
+        @media (max-width: $breakpoint-laptop) {
+            font-size: $fsXl-laptop;
+        }
+    }
+
+    blockquote {
+        font-size: $fsLarge;
+
+        @media (max-width: $breakpoint-laptop) {
+            font-size: $fsLarge-laptop;
+        }
+    }
+
+    p {
+        margin: 1.8rem 0;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        .icon {
+            background-color: $primaryColor;
+            color: #fff;
+            padding: 0.8rem 1.2rem;
+            border-radius: $rounded;
+            font-weight: 700;
+            height: 5rem;
+            width: 5rem;
+        }
+    }
+}
