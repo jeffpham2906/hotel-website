@@ -1,0 +1,155 @@
+@use '../../components/color/colors.scss' as *;
+
+header {
+    position: relative;
+    padding: 15rem;
+    background-color: $greyColor;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: $fs2Xl;
+        text-transform: uppercase;
+        width: fit-content;
+
+        @media (max-width: $breakpoint-laptop) {
+            font-size: $fs2Xl-laptop;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: $fs2Xl-tablet;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 3.8rem;
+        }
+    }
+}
+
+main {
+    padding: 0 20rem;
+    margin-top: 18rem;
+    font-size: $fsNormal;
+
+    @media (max-width: $breakpoint-laptop) {
+        font-size: $fsNormal-laptop;
+        padding: 0 10rem;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        padding-inline: 7rem;
+        font-size: $fsNormal-tablet;
+        margin-top: 10rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        padding-inline: 3rem;
+        margin-top: 8rem;
+    }
+
+    .ct-intro {
+        margin-bottom: 10rem;
+
+        @media (max-width: $breakpoint-tablet) {
+            margin-bottom: 7rem;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-family: Adobe Garamond Pro;
+            text-align: left;
+            margin: 0;
+            font-size: $fsXl;
+            font-weight: 700;
+            line-height: 1.3;
+
+            @media (max-width: $breakpoint-laptop) {
+                font-size: $fsXl-laptop;
+            }
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: $fsXl-tablet;
+            }
+        }
+    }
+
+    .ct-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        gap: 5rem;
+
+        @media (max-width: $breakpoint-tablet) {
+            gap: 3rem;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            grid-template-columns: 1fr;
+        }
+
+        .ct-main-infor {
+            line-height: 1.3;
+
+            button {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                border: none;
+                font-size: $fsNormal;
+                color: $greyColor;
+                padding: 1.3rem 0;
+                font-weight: 700;
+                cursor: pointer;
+
+                svg {
+                    width: 4rem;
+                    height: 2rem;
+                }
+            }
+
+            p {
+                margin-top: 1rem;
+            }
+        }
+
+
+        .ct-main-form {
+            padding-left: 10rem;
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: $breakpoint-tablet) {
+                padding-left: 4rem;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                padding-left: 0;
+            }
+
+            input {
+                padding: 1rem 2rem;
+                margin-bottom: 1.2rem;
+            }
+
+            div {
+                display: flex;
+                flex-direction: row-reverse;
+
+
+                .btn {
+                    margin-top: 2rem;
+                    border: none;
+                    background-color: $primaryColor;
+                    padding: 1.4rem 2rem;
+                    width: fit-content;
+                    color: #fff;
+                    font-weight: 700;
+                    border-radius: $rounded;
+
+                }
+            }
+        }
+    }
+}

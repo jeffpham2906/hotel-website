@@ -7,4 +7,12 @@
     @media (max-width: $breakpoint-laptop) {
         padding-inline: 10rem;
     }
+
+    @media (max-width: $breakpoint-tablet) {
+        padding-inline: 7rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        padding-inline: 3rem;
+    }
 }

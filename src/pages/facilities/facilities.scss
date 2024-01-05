@@ -23,8 +23,25 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            padding: 1.6rem 20rem;
+            padding: 1.6rem 0;
             z-index: 10;
+            width: 50%;
+            text-align: center;
+
+            @media (max-width: $breakpoint-laptop) {
+                font-size: $fsLarge-laptop;
+                width: 40%;
+            }
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: $fsLarge-tablet;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 1.8rem;
+                width: 60%;
+                padding: 1rem 0;
+            }
         }
 
         .overlay {

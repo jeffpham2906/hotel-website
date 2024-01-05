@@ -15,6 +15,18 @@ footer {
         margin-top: 14rem;
     }
 
+    @media (max-width: $breakpoint-tablet) {
+        padding: 8rem 7rem;
+        margin-top: 12.5rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        padding: 6rem 6rem;
+    }
+
+
     .triagle {
         position: absolute;
         width: 0;
@@ -28,10 +40,20 @@ footer {
     }
 
     .footer-infor {
+        @media (max-width: $breakpoint-mobile) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            text-align: center;
+        }
+
         div {
             width: fit-content;
             text-align: center;
             margin-bottom: 1.6rem;
+
+            @media (max-width: $breakpoint-mobile) {
+                width: 100%;
+            }
 
             h1 {
                 text-transform: uppercase;
@@ -40,6 +62,10 @@ footer {
                 font-weight: 700;
                 font-size: $fsLarge;
                 margin-bottom: 0.5rem;
+
+                @media (max-width: $breakpoint-tablet) {
+                    font-size: $fsLarge-tablet;
+                }
             }
 
             span {
@@ -47,11 +73,16 @@ footer {
                 @extend h1;
                 letter-spacing: 5.4px;
 
+
             }
         }
 
         p {
             font-size: 1.4rem;
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 1.3rem;
+            }
         }
     }
 
@@ -65,10 +96,24 @@ footer {
             flex-direction: column;
             gap: 2rem;
 
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 1.5rem;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                gap: 1rem;
+            }
+
             li {
                 display: flex;
                 align-items: center;
                 gap: 3rem;
+
+                @media (max-width: $breakpoint-mobile) {
+                    gap: 2rem;
+                    align-items: center;
+                    justify-content: center;
+                }
 
                 img {
                     width: 18.703px;
@@ -80,28 +125,50 @@ footer {
     }
 
     .footer-subscribe {
+        @media (max-width: $breakpoint-mobile) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            align-items: center;
+            justify-content: center;
+            display: grid;
+        }
+
         p {
             font-size: 1.6rem;
             margin-bottom: 4rem;
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 1.5rem;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                margin-bottom: 2rem;
+                text-align: center;
+            }
         }
 
         form {
-
+            font-size: 1.6rem;
             display: flex;
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: 1.5rem;
+            }
 
             input {
                 border: 2px solid $primaryColor ;
                 padding: 1.2rem 2.4rem;
                 background-color: transparent;
                 color: #FFF;
-                font-size: 1.6rem;
                 border-radius: $rounded 0 0 $rounded ;
                 width: 80%;
-
 
                 &::placeholder {
                     color: #FFF;
                 }
+
+
+
             }
 
             .btn {
@@ -109,11 +176,17 @@ footer {
                 border: 2px solid $primaryColor ;
                 background-color: $primaryColor;
                 padding: 1.2rem 2.4rem;
-                font-size: 1.6rem;
                 text-transform: uppercase;
-
                 border-radius: 0 $rounded $rounded 0;
                 cursor: pointer;
+
+                @media (max-width: $breakpoint-tablet) {
+                    padding: 1rem 2rem;
+                }
+
+                @media (max-width: $breakpoint-mobile) {
+                    padding: 0.8rem 1.6rem;
+                }
             }
         }
     }

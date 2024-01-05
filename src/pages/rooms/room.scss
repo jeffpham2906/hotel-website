@@ -6,10 +6,8 @@
     gap: 10rem;
 
     .room-item {
-        font-size: $fsNormal;
         border: 1px solid #14274A;
         border-radius: 0 0 0.8rem 0.8rem;
-
 
         .item-image {
             position: relative;
@@ -27,11 +25,26 @@
                 color: #fff;
                 font-weight: 700;
                 text-transform: uppercase;
-                font-size: 5rem;
+                font-size: $fs2Xl;
                 width: 100%;
                 text-align: center;
                 padding: 3rem 0;
                 z-index: 2;
+
+                @media (max-width: $breakpoint-laptop) {
+                    font-size: $fs2Xl-laptop;
+                    padding: 2.4rem 0;
+                }
+
+                @media (max-width: $breakpoint-tablet) {
+                    font-size: $fsXl-tablet;
+                    padding: 2rem 0;
+                }
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 2.4rem;
+                    padding: 1.2rem 0;
+                }
             }
 
             .overlay {
@@ -51,6 +64,19 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 5rem;
+
+            @media (max-width: $breakpoint-laptop) {
+                padding: 4rem 12rem;
+            }
+
+            @media (max-width: $breakpoint-tablet) {
+                padding: 3rem 8rem;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                padding: 2rem 4rem;
+            }
 
             .action-btn {
                 display: flex;
@@ -59,8 +85,20 @@
                 align-items: center;
                 gap: 2rem;
 
+                @media (max-width: $breakpoint-laptop) {
+                    font-size: $fsNormal-laptop;
+                }
+
+                @media (max-width: $breakpoint-tablet) {
+                    font-size: $fsNormal-tablet;
+                }
+
                 p {
                     font-weight: 700;
+
+                    @media (max-width: $breakpoint-mobile) {
+                        display: none;
+                    }
 
                 }
 
@@ -73,18 +111,45 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 4rem;
+                    font-size: $fsXl;
                     color: #fff;
+
+                    @media (max-width: $breakpoint-laptop) {
+                        font-size: $fsXl-laptop;
+                    }
+
+                    @media (max-width: $breakpoint-tablet) {
+                        font-size: $fsXl-tablet;
+                    }
+
+                    @media (max-width: $breakpoint-mobile) {
+                        font-size: 3rem;
+                        width: 3.4rem;
+                        height: 3.4rem;
+                    }
                 }
             }
 
             .item-price {
                 background-color: $primaryColor;
                 color: #fff;
-                font-size: 2rem;
+                font-size: $fsNormal;
                 font-weight: 700;
                 padding: 1.5rem 3.2rem;
                 border-radius: $rounded;
+
+                @media (max-width: $breakpoint-laptop) {
+                    font-size: $fsNormal-laptop;
+                }
+
+                @media (max-width: $breakpoint-tablet) {
+                    font-size: $fsNormal-tablet;
+                }
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 1.6rem;
+                    padding: 1.2rem 2.8rem;
+                }
             }
 
         }

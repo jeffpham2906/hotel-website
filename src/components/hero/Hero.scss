@@ -3,95 +3,41 @@
 .hero {
     background-repeat: no-repeat;
     background-size: cover;
-
     width: 100%;
     height: 100vh;
     padding: 0 20rem;
+    position: relative;
 
     @media (max-width:$breakpoint-laptop) {
         padding: 0 10rem;
     }
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5rem;
-
-        .logo {
-            font-size: $fsXl;
-            text-transform: uppercase;
-            font-family: Adobe Garamond Pro;
-            letter-spacing: 6px;
-            text-align: center;
-            background-color: $primaryColor;
-            padding: 3.6rem 2.9rem;
-            border-radius: 0 0 4rem 4rem;
-
-            @media (max-width:$breakpoint-laptop) {
-                padding: 2.8rem 2.1rem;
-                font-size: $fsXl-laptop;
-            }
-
-            span {
-                font-size: 1.5rem;
-                display: block;
-                letter-spacing: 9px;
-            }
-        }
-
-        .main-nav {
-            color: white;
-            font-size: $fsNormal;
-
-            @media (max-width:$breakpoint-laptop) {
-                font-size: 2rem;
-            }
-
-            ul {
-                list-style: none;
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                align-items: center;
-
-                li {
-                    cursor: pointer;
-                    text-align: center;
-                    transition: all .15s ease-in-out;
-
-                    &:hover {
-                        text-decoration: underline;
-                        text-underline-offset: 1rem;
-                        font-weight: 600;
-                    }
-
-                    &:last-child {
-                        width: 16rem;
-                    }
-
-                    a {
-                        color: #FFF;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
+    @media (max-width:$breakpoint-tablet) {
+        padding: 0 7rem;
     }
 
+    @media (max-width:$breakpoint-mobile) {
+        padding-inline: 3rem;
+    }
+
+
     .hero-body {
-        margin-top: 17rem;
+        height: 100%;
+        padding-top: 32rem;
+
         display: flex;
         flex-direction: column;
         text-transform: uppercase;
         color: #FFF;
-        height: calc(100% - 17rem - 13.6rem);
         gap: 2rem;
 
-        @media (max-width:$breakpoint-laptop) {
-            margin-top: 14.5rem;
-            height: calc(100% - 14.5rem - 11.7rem);
+        @media (max-width:$breakpoint-tablet) {
+            padding-top: 26rem;
         }
 
+        @media (max-height: 690px) {
+            padding-top: 17rem;
+        }
 
         .sologan {
 
@@ -101,6 +47,14 @@
 
                 @media (max-width:$breakpoint-laptop) {
                     font-size: $fsXl-laptop;
+                }
+
+                @media (max-width:$breakpoint-tablet) {
+                    font-size: $fsXl-tablet;
+                }
+
+                @media (max-width:$breakpoint-mobile) {
+                    font-size: 3rem;
                 }
             }
 
@@ -114,6 +68,20 @@
                     font-size: 11rem;
                     letter-spacing: 0.8rem;
                 }
+
+                @media (max-width:$breakpoint-tablet) {
+                    font-size: 9.8rem;
+                    letter-spacing: 0.8rem;
+                }
+
+                @media (max-width:$breakpoint-mobile) {
+                    font-size: 7rem;
+                    line-height: 1.1;
+                }
+
+                @media (max-width:400px) {
+                    font-size: 6rem;
+                }
             }
 
             h3 {
@@ -125,6 +93,20 @@
                 @media (max-width:$breakpoint-laptop) {
                     font-size: $fs2Xl-laptop;
                     letter-spacing: 1.8rem;
+                }
+
+                @media (max-width:$breakpoint-tablet) {
+                    font-size: $fs2Xl-tablet;
+                    letter-spacing: 1.5rem;
+                }
+
+                @media (max-width:$breakpoint-mobile) {
+                    font-size: 4rem;
+                    letter-spacing: 1.3rem;
+                }
+
+                @media (max-width:400px) {
+                    font-size: 3rem;
                 }
             }
 
@@ -138,15 +120,28 @@
                     letter-spacing: 1.4px;
                     font-size: $fsNormal-laptop;
                 }
+
+                @media (max-width:$breakpoint-tablet) {
+                    font-size: $fsNormal-tablet;
+                    letter-spacing: 1.2px;
+                }
+
+                @media (max-width:$breakpoint-mobile) {
+                    line-height: 1.35;
+                }
             }
         }
 
         .action {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: center;
             flex: 1;
+
+            @media (max-width:$breakpoint-tablet) {
+                justify-content: space-evenly;
+            }
 
             button {
                 color: #FFF;
@@ -169,6 +164,14 @@
                     font-size: $fsLarge-laptop;
                 }
 
+                @media (max-width:$breakpoint-tablet) {
+                    font-size: $fsLarge-tablet;
+                }
+
+                @media (max-width:$breakpoint-mobile) {
+                    // font-size: $fsLarge-mobile;
+                }
+
                 &:hover {
                     opacity: 0.9;
                 }
@@ -177,6 +180,10 @@
                     @media (max-width:$breakpoint-laptop) {
                         width: 2.5rem;
                         height: 2.3rem;
+                    }
+
+                    @media (max-width:$breakpoint-tablet) {
+                        width: 2.1rem;
                     }
 
                     width: 2.8rem;
@@ -200,6 +207,10 @@
                     font-size: $fsNormal-laptop;
                 }
 
+                @media (max-width:$breakpoint-tablet) {
+                    font-size: $fsNormal-tablet;
+                }
+
                 img {
                     cursor: pointer;
                     width: 5rem;
@@ -209,6 +220,11 @@
                     @media (max-width:$breakpoint-laptop) {
                         width: 4.5rem;
                         height: 4.5rem;
+                    }
+
+                    @media (max-width:$breakpoint-tablet) {
+                        width: 4rem;
+                        height: 4rem;
                     }
 
                     &:hover {

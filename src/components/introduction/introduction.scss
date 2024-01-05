@@ -8,14 +8,36 @@
         font-family: Adobe Garamond Pro;
         letter-spacing: 3px;
         font-weight: 700;
-        font-size: 5rem;
+        font-size: $fs2Xl;
         margin-bottom: 3rem;
         text-transform: uppercase;
+
+        @media (max-width: $breakpoint-laptop) {
+            font-size: $fs2Xl-laptop;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: $fs2Xl-tablet;
+            margin-bottom: 2rem;
+        }
+
     }
 
     p {
         font-size: $fsNormal;
         padding: 0 5rem;
         line-height: 1.45;
+
+        @media (max-width: $breakpoint-laptop) {
+            font-size: $fsNormal-laptop;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: $fsNormal-tablet;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 0;
+        }
     }
 }

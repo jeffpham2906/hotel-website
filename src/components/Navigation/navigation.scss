@@ -1,0 +1,143 @@
+@use '../color/colors.scss' as *;
+
+.navigate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+
+    @media (max-width: $breakpoint-laptop) {
+        padding: 0 10rem;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        padding: 0 7rem;
+    }
+
+    @media (max-width:$breakpoint-mobile) {
+        padding-inline: 3rem;
+    }
+
+    .logo {
+        font-size: $fsXl;
+        text-transform: uppercase;
+        font-family: Adobe Garamond Pro;
+        letter-spacing: 6px;
+        text-align: center;
+        background-color: $primaryColor;
+        padding: 3.4rem 2.7rem;
+        border-radius: 0 0 4rem 4rem;
+        color: $greyColor;
+
+        @media (max-width:$breakpoint-laptop) {
+            padding: 2.8rem 2.1rem;
+            font-size: $fsXl-laptop;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            padding: 2rem 1.3rem;
+            font-size: $fsXl-tablet;
+        }
+
+        // @media (max-width:$breakpoint-mobile) {
+        //     font-size: $fsXl-mobile;
+        // }
+
+        span {
+            font-size: 1.5rem;
+            display: block;
+            letter-spacing: 9px;
+
+        }
+    }
+
+    .main-nav {
+        color: white;
+        font-size: $fsNormal;
+
+        @media (max-width:$breakpoint-laptop) {
+            font-size: 2rem;
+
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: center;
+
+            li {
+                cursor: pointer;
+                text-align: center;
+                transition: all .15s ease-in-out;
+
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 1rem;
+                    font-weight: 600;
+                }
+
+                &:last-child {
+                    width: 16rem;
+                }
+
+                a {
+                    color: #FFF;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .mobile-nav {
+        width: 4rem;
+        height: 4rem;
+        color: #FFF;
+        display: none;
+        position: relative;
+
+        @media (max-width: $breakpoint-tablet) {
+            display: block;
+        }
+
+        nav {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 15rem;
+            background-color: #FFF;
+            overflow: hidden;
+            padding: 1rem;
+            font-size: $fsNormal-tablet;
+            box-shadow: 0 0.4rem 2rem rgba($color: #FFF, $alpha: 0.3);
+
+            ul {
+                list-style: none;
+
+                li {
+
+                    padding: 0.4rem 1rem;
+                    text-align: left;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+
+                    a {
+                        color: $greyColor;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

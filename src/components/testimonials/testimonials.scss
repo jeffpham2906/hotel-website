@@ -9,6 +9,10 @@
         font-size: $fsNormal-laptop;
     }
 
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $fsNormal-tablet;
+    }
+
     h2 {
         font-weight: 700;
         font-size: $fsXl;
@@ -17,6 +21,10 @@
         @media (max-width: $breakpoint-laptop) {
             font-size: $fsXl-laptop;
         }
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: $fsXl-tablet;
+        }
     }
 
     blockquote {
@@ -24,6 +32,10 @@
 
         @media (max-width: $breakpoint-laptop) {
             font-size: $fsLarge-laptop;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: $fsLarge-tablet;
         }
     }
 
@@ -44,6 +56,11 @@
             font-weight: 700;
             height: 5rem;
             width: 5rem;
+
+            @media (max-width: $breakpoint-tablet) {
+                height: 4.3rem;
+                width: 4.3rem;
+            }
         }
     }
 }

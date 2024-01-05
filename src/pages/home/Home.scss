@@ -5,6 +5,10 @@ h2 {
     font-weight: 400;
     text-align: center;
     margin-bottom: 8rem;
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $fsLarge-tablet;
+    }
 }
 
 .body-room {
@@ -13,6 +17,14 @@ h2 {
     align-items: center;
     gap: 3rem;
     margin-bottom: 4rem;
+
+    @media (max-width: $breakpoint-tablet) {
+        grid-template-columns: minmax(32rem, 1fr) auto;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+    }
 
     .body-room-left {
 
@@ -30,6 +42,10 @@ h2 {
             @media (max-width: $breakpoint-laptop) {
                 font-size: $fsXl-laptop;
             }
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: $fsXl-tablet;
+            }
         }
 
         p {
@@ -40,6 +56,11 @@ h2 {
             @media (max-width: $breakpoint-laptop) {
                 font-size: $fsNormal-laptop;
                 line-height: 1.4;
+            }
+
+            @media (max-width: $breakpoint-tablet) {
+                font-size: $fsNormal-tablet;
+                line-height: 1.35;
             }
         }
 
@@ -58,6 +79,12 @@ h2 {
             @media (max-width: $breakpoint-laptop) {
                 padding: 1.5rem 5.4rem;
                 font-size: $fsNormal-laptop;
+            }
+
+            @media (max-width: $breakpoint-tablet) {
+                padding: 1.2rem 5rem;
+                font-size: $fsNormal-tablet;
+
             }
 
             &:hover {
