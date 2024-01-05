@@ -24,17 +24,17 @@ function Footer() {
       <div className="footer-detail">
         <ul>
           <li>
-            <img src="./src/assets/fb.png" alt="facebook icon" />
+            <img src="./images/fb.png" alt="facebook icon" />
             Facebook
           </li>
           <li>
             {" "}
-            <img src="./src/assets/tw.png" alt="twitter icon" />
+            <img src="./images/tw.png" alt="twitter icon" />
             Twitter
           </li>
           <li>
             {" "}
-            <img src="./src/assets/ig.svg" alt="instagram icon" />
+            <img src="./images/ig.svg" alt="instagram icon" />
             Instagram
           </li>
         </ul>

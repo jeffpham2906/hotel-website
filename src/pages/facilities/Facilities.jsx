@@ -7,34 +7,34 @@ import Introduction from "../../components/introduction/Introduction";
 const services = [
   {
     title: "the gym",
-    imgUrl: "./src/assets/fac1.png",
+    imgUrl: "./images/fac1.png",
   },
   {
     title: "poolside bar",
-    imgUrl: "./src/assets/fac2.png",
+    imgUrl: "./images/fac2.png",
   },
   {
     title: "the spa",
-    imgUrl: "./src/assets/fac3.png",
+    imgUrl: "./images/fac3.png",
   },
   {
     title: "swimming pool",
-    imgUrl: "./src/assets/fac4.png",
+    imgUrl: "./images/fac4.png",
   },
   {
     title: "restaurant",
-    imgUrl: "./src/assets/fac5.png",
+    imgUrl: "./images/fac5.png",
   },
   {
     title: "laundry",
-    imgUrl: "./src/assets/fac6.png",
+    imgUrl: "./images/fac6.png",
   },
 ];
 
 function Facilities() {
   return (
     <>
-      <Hero backGroundImage="./src/assets/facilities.png" />
+      <Hero backGroundImage="./images/facilities.png" />
       <AppLayout>
         <Introduction
           title="facilities"

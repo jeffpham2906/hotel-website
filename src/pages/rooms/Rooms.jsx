@@ -7,23 +7,23 @@ const RoomsAndRates = [
   {
     title: "single room",
     price: 147,
-    image: "./src/assets/room1.png",
+    image: "./images/room1.png",
   },
   {
     title: "double room",
     price: 155,
-    image: "./src/assets/room2.png",
+    image: "./images/room2.png",
   },
   {
     title: "twin room",
     price: 155,
-    image: "./src/assets/room3.png",
+    image: "./images/room3.png",
   },
 ];
 function Rooms() {
   return (
     <>
-      <Hero backGroundImage={"./src/assets/room.png"} />
+      <Hero backGroundImage={"./images/room.png"} />
       <AppLayout>
         <Introduction
           title="rooms and rates"

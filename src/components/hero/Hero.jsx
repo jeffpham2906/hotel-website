@@ -23,7 +23,7 @@ function Hero({ backGroundImage }) {
         </div>
         <div className="action">
           <button>
-            <img src="./src/assets/home.svg" alt="home icon" />
+            <img src="./images/home.svg" alt="home icon" />
             book now
           </button>
           <div
@@ -35,7 +35,7 @@ function Hero({ backGroundImage }) {
             }
           >
             Scroll
-            <img src="./src/assets/subtraction.svg" alt="subtraction icon" />
+            <img src="./images/subtraction.svg" alt="subtraction icon" />
           </div>
         </div>
       </div>
